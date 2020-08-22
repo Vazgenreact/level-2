@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+@font-face {
+	font-family: 'Exo 2.0';
+	src: url('./font/Exo20-Thin.woff2') format('woff2'),
+	url('./font/Exo20-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+	min-height: 100vh;
+	display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.homePage {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 30px 0;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(./images/Pattern.png);
+	background-size: cover;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.homePage__container {
+	width: 100%;
+	max-width: 1150px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
-
-.App-link {
-  color: #61dafb;
+.pageTitle {
+	margin: 0 0 20px;
+	font-size: 36px;
+	line-height: 1;
+	color: #fff;
+	font-family: 'Exo 2.0';
+	text-shadow: 0 1px 0 #000000;
+	font-weight: 400;
+	text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.d-none {
+	display: none;
+}
+.d-flex {
+	display: flex;
 }

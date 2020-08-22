@@ -1,0 +1,134 @@
+.cats {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.cat {
+	max-width: 320px;
+	margin: 0 auto 20px;
+}
+.call {
+	width: 33.33%;
+	padding: 0 15px;
+}
+.contentTop {
+	position: relative;
+	background-image: url('../../images/default.png');
+	background-size: 100% 100%;
+	min-height: 480px;
+	padding-left: 50px;
+	padding-right: 15px;
+	padding-top: 24px;
+	margin-bottom: 15px;
+}
+.contentTop:not(.disabled) {
+	cursor: pointer;
+}
+[type="checkbox"]:checked + .contentTop {
+	background-image: url('../../images/selected.png');
+}
+[type="checkbox"]:disabled + .contentTop {
+	background-image: url('../../images/disabled.png');
+}
+.desc {
+	color: #fff;
+	font-size: 13px;
+	text-shadow: 0 1px 0 #000000;
+	text-align: center;
+}
+.yellowColor {
+	color: #ffff66;
+}
+.name {
+	margin-bottom: 5px;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1;
+}
+.h3 {
+	margin-bottom: 16px;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1;
+}
+.topText {
+	margin-bottom: 5px;
+	color: #666;
+}
+.orderLink {
+	background: none;
+	border: 0;
+	color: blue;
+	cursor: pointer;
+}
+.bonus {
+	width: 60%;
+	min-width: 130px;
+	color: #666666;
+	font-size: 14px;
+}
+.catImg {
+	position: absolute;
+	left: 4px;
+	bottom: 4px;
+	right: 4px;
+	height: 270px;
+	max-width: 100%;
+	object-fit: contain;
+	object-position: bottom;
+}
+.weight {
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	width: 81px;
+	height: 81px;
+	border-radius: 50%;
+	background-color: #1698d9;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 21px;
+	color: #fff;
+}
+.weightCount {
+	font-size: 2em;
+	line-height: 1;
+}
+.selected .weight {
+	background-color: #d91667;
+}
+.disabled .weight {
+	background-color: #b3b3b3;
+}
+.disabled .h3,
+.disabled .name,
+.disabled .topText,
+.disabled .bonus,
+.disabled .catImg {
+	opacity: .5;
+	color: #b3b3b3;
+}
+
+@media screen and (max-width: 1024px) {
+	.call {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 767.5px) {
+	.call {
+		width: 100%;
+		padding: 0;
+	}
+	.contentTop {
+		min-height: 400px;
+		padding-left: 25px;
+	}
+}
+@media screen and (max-width: 575.5px) {
+	.catImg {
+		height: 190px;
+	}
+}
